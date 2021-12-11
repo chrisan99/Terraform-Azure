@@ -4,7 +4,7 @@ variable "environment_tag" {
 }
 variable "azure-rg-1" {
   type        = string
-  description = "resource group 1"
+  description = "KeyVault Resource Group"
 }
 variable "loc1" {
   description = "The location for this Lab environment"

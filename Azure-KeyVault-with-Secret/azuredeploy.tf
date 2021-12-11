@@ -57,6 +57,7 @@ resource "azurerm_key_vault" "kv1" {
     Environment = var.environment_tag
   }
 }
+# 2nd access-policy
  access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
     object_id = "18d3f8e0-241f-4fb5-bf27-5dc43a65450f"

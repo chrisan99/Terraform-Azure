@@ -38,8 +38,8 @@ resource "azurerm_key_vault" "kv1" {
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
-    object_id = "18d3f8e0-241f-4fb5-bf27-5dc43a65450f"
-    #object_id = data.azurerm_client_config.current.object_id
+    #object_id = "18d3f8e0-241f-4fb5-bf27-5dc43a65450f"
+    object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
       "get", "list"

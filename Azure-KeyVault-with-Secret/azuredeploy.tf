@@ -57,6 +57,26 @@ resource "azurerm_key_vault" "kv1" {
     Environment = var.environment_tag
   }
 }
+ access_policy {
+    tenant_id = data.azurerm_client_config.current.tenant_id
+    object_id = "18d3f8e0-241f-4fb5-bf27-5dc43a65450f"
+
+    key_permissions = [
+      "get", "list"
+    ]
+
+    secret_permissions = [
+      "get", "backup", "delete", "list", "purge", "recover", "restore", "set",
+    ]
+
+    storage_permissions = [
+      "get", "list"
+    ]
+  }
+  tags = {
+    Environment = var.environment_tag
+  }
+}
 #Create KeyVault VM password
 resource "random_password" "vmpassword" {
   length  = 20

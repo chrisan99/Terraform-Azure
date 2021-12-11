@@ -1,3 +1,12 @@
+#backend
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "RG100"
+    storage_account_name = "rg100store2021"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
+}
 #Resource Groups
 resource "azurerm_resource_group" "rg1" {
   name     = var.azure-rg-1

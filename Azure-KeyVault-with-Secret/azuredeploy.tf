@@ -91,4 +91,5 @@ resource "azurerm_key_vault_secret" "vmpassword2021" {
   value        = "my-secret-123"
   key_vault_id = azurerm_key_vault.kv1.id
   depends_on   = [azurerm_key_vault.kv1]
+  expirate_date = 2022-12-11'T'22:00:00'Z'
 }

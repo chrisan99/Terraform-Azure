@@ -39,7 +39,7 @@ resource "azurerm_key_vault" "kv1" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "get",
+      "get", "list"
     ]
 
     secret_permissions = [
@@ -47,7 +47,7 @@ resource "azurerm_key_vault" "kv1" {
     ]
 
     storage_permissions = [
-      "get",
+      "get", "list"
     ]
   }
   tags = {

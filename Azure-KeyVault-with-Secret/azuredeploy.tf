@@ -85,3 +85,10 @@ resource "azurerm_key_vault_secret" "vmpassword" {
   key_vault_id = azurerm_key_vault.kv1.id
   depends_on   = [azurerm_key_vault.kv1]
 }
+#Create Key Vault Secret 2
+resource "azurerm_key_vault_secret" "vmpassword2021" {
+  name         = "vmpassword2021"
+  value        = "my-secret-123"
+  key_vault_id = azurerm_key_vault.kv1.id
+  depends_on   = [azurerm_key_vault.kv1]
+}

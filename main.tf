@@ -21,3 +21,8 @@ resource "azurerm_resource_group" "rgtest100" {
   name     = "rgtest100"
   location = "southeastasia"
 }
+
+resource "azurerm_resource_group" "rgtest101" {
+  name     = "rgtest101"
+  location = "southeastasia"
+}
